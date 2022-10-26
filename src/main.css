@@ -1,0 +1,470 @@
+html {
+    background: radial-gradient(rgb(211, 211, 211), rgb(36, 36, 36));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    
+}
+body::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    
+    background: url('/assets/images/bg-4.png');
+    background-size: cover ;
+    background-position: center;
+    animation: animScale 60s infinite;;
+}
+
+@keyframes animScale {
+    0% { 
+        transform: scale(1);
+    }
+    50% { 
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.card-profile {
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 600px;
+    height: 700px;
+    border-radius: 70px ;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 14px 200px -60px;
+    overflow: hidden;
+}
+
+.transform {
+    background: linear-gradient(45deg, #b74679,#668df7);
+    margin: 0 auto;
+    width: 300px;
+    padding: 17px;
+    border-bottom-left-radius:60px ;
+    border-bottom-right-radius: 60px;
+    text-align: center;
+    animation: animColor 10s infinite;  
+}
+
+.transform::before{
+    content:"";
+    position: absolute;
+    background-color:transparent;
+    padding: 20px;
+    top:0;
+    left:101px;
+    border-top-right-radius: 60px;
+    box-shadow: 15px -30px 0 15px #ab518c;   
+}
+
+.transform::after{
+    content:"";
+    position: absolute;
+    background-color:transparent;
+    padding: 20px;
+    top:0;
+    right: 101px;
+   
+    border-top-left-radius: 60px;
+    box-shadow: -15px -30px 0 15px #6d86e9; 
+    
+}
+
+.transform span {
+    color: rgb(223, 223, 223);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+@keyframes animColor {
+    0% {
+        box-shadow: 0px 0px 40px 15px #fc5dfc;
+    }
+    50%{
+        box-shadow: 0px 0px 40px 15px #4872fd;
+    }
+    100%{
+        box-shadow: 0px 0px 40px 15px #f06af0;
+    }
+}
+
+.img-profile{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.img-profile img{
+    width: 170px;
+    height: 170px;
+    border-radius:50%;
+    box-shadow: 0px 0px 6px 0.1px black;
+}
+
+.name{
+    padding: 20px 0px 40px 0px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.txt-dev{
+    padding-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.map {
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.map :nth-child(1) {
+    margin-right: 10px;
+}
+
+.map img {
+    width: 16px;
+   
+}
+
+.infos {
+    display: flex;
+  
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+
+.all-text {
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 600;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.text-3 {
+    width: 83px;
+}
+
+.reseau{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 30px;
+
+}
+
+.reseau a{
+    padding: 10px 10px 8px 10px;
+    margin: 0px 20px; 
+    border-radius: 18px;
+
+    color: #fff;
+}
+
+.linked-in{
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.507),rgb(9, 13, 241),rgb(9, 102, 241));
+    box-shadow: 0px 0px 12px 0px rgb(0, 77, 243);
+}
+
+.github {
+    background: linear-gradient(45deg,gray,rgb(97, 96, 96),rgb(68, 68, 68),rgb(53, 53, 53),rgb(12, 12, 12));
+    box-shadow: 0px 0px 12px 0px rgb(20, 20, 20);
+}
+
+.contact {
+    font-weight: 800;
+    margin: 0 auto;
+    margin-top: 26px;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 300px;
+   
+}
+
+.contact h2 {
+    border-radius: 50px;
+    padding: 16px;
+    background: linear-gradient(30deg,rgba(37, 146, 218, 0.616),
+                                rgba(36, 83, 238, 0.596),
+                                rgb(71, 1, 88));
+                                box-shadow: 0px 0px 20px 1px rgb(63, 63, 243);
+}
+.contact h2:hover {
+   box-shadow: 0px 6px 20px 2px rgb(24, 24, 236);
+   transition:  0.8s;
+}
+
+@media screen and (max-width: 1280px) {
+    .card-profile{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .card-profile{
+        margin-top: 14px;
+        width: 400px;
+        height: 570px;
+    }
+
+    .transform {
+        width: 200px;
+        height: 16px;
+        padding: 14px;
+    }
+
+    .transform span {
+        font-size: 1.3rem;
+    }
+
+    .transform::before{
+        left:56px;
+        box-shadow: 15px -30px 0 7px #ab518c;   
+    }
+    
+    .transform::after{
+        right: 56px;
+        box-shadow: -15px -30px 0 10px #6d86e9; 
+    }
+
+    .img-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name{
+        padding: 16px 0px 30px 0px;
+        font-size: 1.8rem;
+    }
+
+    .txt-dev{
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        font-size: 1.4rem;
+    }
+
+    .contact h2{
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .card-profile{
+        margin-top: 300px; 
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    .card-profile{
+        margin-top: 200px;
+        
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    .card-profile{
+        margin-top: 160px;
+        
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .card-profile{
+        margin-top: 60px;
+        width: 400px;
+        height: 600px;
+    }
+
+    .transform {
+        width: 200px;
+        height: 16px;
+        padding: 14px;
+    }
+
+    .transform span {
+        font-size: 1.3rem;
+    }
+
+    .transform::before{
+        left:56px;
+        box-shadow: 15px -30px 0 7px #ab518c;   
+    }
+    
+    .transform::after{
+        right: 56px;
+        box-shadow: -15px -30px 0 10px #6d86e9; 
+    }
+
+    .img-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name{
+        padding: 16px 0px 30px 0px;
+        font-size: 1.8rem;
+    }
+
+    .txt-dev{
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        font-size: 1.4rem;
+    }
+
+    .contact h2{
+        padding: 12px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .card-profile{
+        margin-top: 120px;
+        width: 400px;
+        height: 600px;
+    }
+
+    .transform {
+        width: 200px;
+        height: 16px;
+        padding: 14px;
+    }
+
+    .transform span {
+        font-size: 1.3rem;
+    }
+
+    .transform::before{
+        left:56px;
+        box-shadow: 15px -30px 0 7px #ab518c;   
+    }
+    
+    .transform::after{
+        right: 56px;
+        box-shadow: -15px -30px 0 10px #6d86e9; 
+    }
+
+    .img-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name{
+        padding: 16px 0px 30px 0px;
+        font-size: 1.8rem;
+    }
+
+    .txt-dev{
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        font-size: 1.4rem;
+    }
+
+    .contact h2{
+        padding: 12px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 385px) {
+    .card-profile{
+        margin-top: 40px;
+        width: 360px;
+        height: 600px;
+    }
+
+    .transform {
+        width: 200px;
+        height: 16px;
+        padding: 14px;
+    }
+
+    .transform span {
+        font-size: 1.3rem;
+    }
+
+    .transform::before{
+        left:36px;
+        box-shadow: 15px -30px 0 7px #ab518c;   
+    }
+    
+    .transform::after{
+        right: 36px;
+        box-shadow: -15px -30px 0 10px #6d86e9; 
+    }
+
+    .img-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name{
+        padding: 16px 0px 30px 0px;
+        font-size: 1.8rem;
+    }
+
+    .txt-dev{
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        font-size: 1.4rem;
+    }
+
+    .contact h2{
+        padding: 12px;
+    }
+
+    @keyframes animScale {
+        0% { 
+            transform: scale(1);
+        }
+        50% { 
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@media screen and (max-width: 365px){
+    .card-profile{
+        margin-top: 60px;
+        width: 340px;
+        height: 600px;
+    }
+}
+
