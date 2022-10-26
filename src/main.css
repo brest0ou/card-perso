@@ -144,18 +144,21 @@ body::before{
 
 .infos {
     display: flex;
-  
+    text-align: center;
     justify-content: space-evenly;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 0.8rem;
 }
 
+.infos span {
+    width: 70px;
+}
+
 
 .all-text {
     display: flex;
     text-align: center;
-    margin-left: 10px;
     font-weight: 600;
     justify-content: space-evenly;
     letter-spacing: 1px;
@@ -163,8 +166,8 @@ body::before{
     margin-bottom: 20px;
 }
 
-.text-3 {
-    width: 83px;
+.all-text span{
+    width: 70px;
 }
 
 .reseau{
